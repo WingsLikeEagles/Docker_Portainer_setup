@@ -34,6 +34,8 @@ https://docs.docker.com/registry/deploying/
 `docker run -d --name portainer -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data localhost:5000/portainer-ce:2.0.0`
 
 You can include a password from a password file -v password_file:/tmp/portainer_password  
+Details here:
+https://documentation.portainer.io/v2.0/deploy/cli/
 `docker run -d --name portainer -v /var/run/docker.sock:/var/run/docker.sock -v portainer_password:/tmp/portainer_password localhost:5000/portainer-ce:2.0.0 --admin-password-file /tmp/portainer_password`
 
 If you do NOT use a password file, the first time you bring up the page it will have you create an admin account and password.  
