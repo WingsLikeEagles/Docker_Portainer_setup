@@ -8,7 +8,7 @@ https://docs.docker.com/engine/install/centos/
 `sudo yum install yum-utils`  
 `sudo yum install yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo`  
 
-This could have been down by just downloading the docker-ce.repo file to the /etc/yum.repo.d/ folder:  
+This could have been done by just downloading the docker-ce.repo file to the /etc/yum.repo.d/ folder:  
 `sudo wget -o /etc/yum.repo.d/docker-ce.repo https://download.docker.com/linux/centos/docker-ce.repo`
 
 Then install docker-ce (this will also install docker-ce-cli & containerd.io):  
