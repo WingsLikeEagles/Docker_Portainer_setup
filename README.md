@@ -27,7 +27,7 @@ https://docs.docker.com/registry/deploying/
 
 # Pull-tag-push portainer/portainer-ce
 `docker pull portainer/portainer-ce:2.1.1`  
-`docker tag portainer/portainer-ce:2.1.1 localhost:5000/portainer-ce:2.1.1`
+`docker tag portainer/portainer-ce:2.1.1 localhost:5000/portainer-ce:2.1.1`  
 `docker push localhost:5000/portainer-ce:2.1.1`
 
 # Create a volume and spin up Portainer-CE
