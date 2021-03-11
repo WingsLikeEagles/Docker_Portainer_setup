@@ -26,17 +26,17 @@ https://docs.docker.com/registry/deploying/
 `docker run -d -p 5000:5000 --restart always -v registry_data:/var/lib/registry --name registry registry:2.7.1`  
 
 # Pull portainer/portainer-ce
-`docker pull portainer/portainer-ce:2.0.0`  
-`docker tag portainer/portainer-ce:2.0.0 localhost:5000/portainer-ce:2.0.0`
+`docker pull portainer/portainer-ce:2.1.1`  
+`docker tag portainer/portainer-ce:2.1.1 localhost:5000/portainer-ce:2.1.1`
 
 # Create a volume and spin up Portainer-CE
 `docker volume create portainer_data`  
-`docker run -d --name portainer -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data localhost:5000/portainer-ce:2.0.0`
+`docker run -d --name portainer -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data localhost:5000/portainer-ce:2.1.1`
 
 You can include a password from a password file -v password_file:/tmp/portainer_password  
 Details here:
 https://documentation.portainer.io/v2.0/deploy/cli/
-`docker run -d --name portainer -v /var/run/docker.sock:/var/run/docker.sock -v portainer_password:/tmp/portainer_password localhost:5000/portainer-ce:2.0.0 --admin-password-file /tmp/portainer_password`
+`docker run -d --name portainer -v /var/run/docker.sock:/var/run/docker.sock -v portainer_password:/tmp/portainer_password localhost:5000/portainer-ce:2.1.1 --admin-password-file /tmp/portainer_password`
 
 If you do NOT use a password file, the first time you bring up the page it will have you create an admin account and password.  
 Login to the new Portainer-CE web site:  
