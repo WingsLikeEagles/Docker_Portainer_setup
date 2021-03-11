@@ -25,9 +25,10 @@ https://docs.docker.com/registry/deploying/
 `docker volume create registry_data`  
 `docker run -d -p 5000:5000 --restart always -v registry_data:/var/lib/registry --name registry registry:2.7.1`  
 
-# Pull portainer/portainer-ce
+# Pull-tag-push portainer/portainer-ce
 `docker pull portainer/portainer-ce:2.1.1`  
 `docker tag portainer/portainer-ce:2.1.1 localhost:5000/portainer-ce:2.1.1`
+`docker push localhost:5000/portainer-ce:2.1.1`
 
 # Create a volume and spin up Portainer-CE
 `docker volume create portainer_data`  
