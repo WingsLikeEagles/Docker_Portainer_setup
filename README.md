@@ -37,7 +37,7 @@ For Podman installations: `podman push --tls-verify=false localhost:5000/my-spec
 # Create a volume and spin up Portainer-CE
 `docker volume create portainer_data`  
 `docker run -d -p 9000:9000 --name portainer -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data localhost:5000/portainer-ce:linux-amd64-2.11.1`  
-NOTE: For Podman, you'll need to start the podman socket first.  `sudo systemctl enable --now podman.socket`
+NOTE: For Podman, you'll need to start the podman socket first.  `sudo systemctl enable --now podman.socket`  And you will need to run the portainer-ce container as root :(  
 
 You can include a password from a password file -v password_file:/tmp/portainer_password  
 Details here:
