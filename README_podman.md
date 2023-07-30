@@ -9,6 +9,10 @@ There are many other places that describe how to install Podman on Fedora.  In a
 
 `sudo yum install podman jq openssl tmux`   
 
+# Some more steps are needed before this, but here is how you run the container.
+## NOTE: runs as root, with `--privilege` and with `:z` on the socket `-v`.  Also, need to start the Podman service:
+`sudo systemctl enable podman.sock` and `sudo systemctl start podman.sock`  
+`sudo podman run --rm -d -p 9000:9000 --privileged --name portainer -v /run/podman/podman.sock:/var/run/docker.sock:z -v portainer_data:/data localhost:5000/portainer-ce:linux-amd64-2.11.1`
 
 # Install Registry so we can have our own local registry (nice for security):
 For more details see:  
