@@ -18,11 +18,11 @@ There are many other places that describe how to install Podman on Fedora.  In a
 For more details see:  
 https://docs.docker.com/registry/deploying/
 
-`docker pull registry:2.8.1`  
-`docker volume create registry_data`  
-`docker run -d -p 5000:5000 --restart always -v registry_data:/var/lib/registry --name registry registry:2.8.1`  
+`podman pull registry:2.8.1`  
+`podman volume create registry_data`  
+`podman run -d -p 5000:5000 --restart always -v registry_data:/var/lib/registry --name registry registry:2.8.1`  
 
-You may need to allow "insecure-registries" if you are just testing locally or in an air-gapped environment.  
+You may need to allow "insecure-registries" if you are just testing locally or in an air-gapped environment (non-https).  
 https://docs.docker.com/registry/insecure/  
 For Podman installations: `podman push --tls-verify=false localhost:5000/my-special-container` should work fine for pushes and pulls locally.
 
